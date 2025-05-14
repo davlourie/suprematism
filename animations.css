@@ -1,105 +1,107 @@
-@keyframes rotate {
-  0% {
-    transform: rotate(-15deg);
-  }
-  50% {
-    transform: rotate(-10deg);
-  }
-  100% {
-    transform: rotate(-15deg);
-  }
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: #f3f1e9;
 }
 
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1) rotate(-5deg);
-  }
-  50% {
-    transform: scale(1.05) rotate(-5deg);
-  }
+.canvas {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+/* Общие стили для всех элементов */
+.moveable {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: top 1s ease, left 1s ease;
 }
 
-@keyframes slide-down {
-  0% {
-    top: 10%;
-  }
-  50% {
-    top: 13%;
-  }
-  100% {
-    top: 10%;
-  }
+/* Жёлтый квадрат */
+.yellow-square {
+  width: 25vw;
+  height: 25vw;
+  background: #f4b400;
+  top: 30%;
+  left: 30%;
+  z-index: 1;
+  transform: rotate(-15deg) translate(-50%, -50%);
 }
 
-@keyframes slide-up {
-  0% {
-    top: 15%;
-  }
-  50% {
-    top: 12%;
-  }
-  100% {
-    top: 15%;
-  }
+/* Красный прямоугольник */
+.red-rect {
+  width: 10vw;
+  height: 30vh;
+  background: #d32f2f;
+  top: 45%;
+  left: 40%;
+  z-index: 2;
+  transform: rotate(-5deg) translate(-50%, -50%);
 }
 
-@keyframes tilt {
-  0% {
-    transform: rotate(-15deg);
-  }
-  50% {
-    transform: rotate(-17deg);
-  }
-  100% {
-    transform: rotate(-15deg);
-  }
+/* Синий прямоугольник */
+.blue-rect {
+  width: 30vw;
+  height: 12vh;
+  background: #263238;
+  top: 35%;
+  left: 52%;
+  z-index: 3;
+  transform: translate(-50%, -50%);
 }
 
-@keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(3px);
-  }
+/* Чёрные вертикальные полосы */
+.black-bar {
+  width: 1vw;
+  height: 40vh;
+  background: #000;
+  z-index: 4;
 }
 
-.animate-rotate {
-  animation: rotate 8s ease-in-out infinite;
+.bar1 {
+  top: 35%;
+  left: 58%;
 }
 
-.animate-pulse {
-  animation: pulse 3s ease-in-out infinite;
+.bar2 {
+  top: 30%;
+  left: 60%;
 }
 
-.animate-float {
-  animation: float 5s ease-in-out infinite;
+/* Косая чёрная линия */
+.black-diagonal {
+  width: 30vw;
+  height: 0.5vh;
+  background: black;
+  top: 65%;
+  left: 45%;
+  transform: rotate(-15deg) translate(-50%, -50%);
+  z-index: 4;
 }
 
-.animate-slide-down {
-  animation: slide-down 4s ease-in-out infinite;
+/* Тонкие синие линии */
+.blue-line {
+  width: 6vw;
+  height: 0.5vh;
+  background: #1a237e;
+  z-index: 5;
 }
 
-.animate-slide-up {
-  animation: slide-up 4s ease-in-out infinite;
+.line1 {
+  top: 70%;
+  left: 38%;
 }
 
-.animate-tilt {
-  animation: tilt 6s ease-in-out infinite;
+.line2 {
+  top: 73%;
+  left: 41%;
 }
 
-.animate-shake {
-  animation: shake 2s ease-in-out infinite;
+.line3 {
+  top: 76%;
+  left: 44%;
 }
+
