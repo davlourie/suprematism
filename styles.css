@@ -1,0 +1,110 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #f3f1e9;
+}
+
+.canvas {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Жёлтый квадрат */
+.yellow-square {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: #f4b400;
+  top: 20%;
+  left: 20%;
+  transform: rotate(-15deg);
+  z-index: 1;
+}
+
+/* Красный прямоугольник */
+.red-rect {
+  position: absolute;
+  width: 100px;
+  height: 300px;
+  background: #d32f2f;
+  top: 25%;
+  left: 35%;
+  transform: rotate(-5deg);
+  z-index: 2;
+}
+
+/* Синий прямоугольник */
+.blue-rect {
+  position: absolute;
+  width: 250px;
+  height: 120px;
+  background: #263238;
+  top: 22%;
+  left: 38%;
+  z-index: 3;
+}
+
+/* Чёрные вертикальные полосы */
+.black-bar {
+  position: absolute;
+  width: 20px;
+  height: 400px;
+  background: #000;
+  z-index: 4;
+}
+
+.bar1 {
+  top: 15%;
+  left: 50%;
+}
+
+.bar2 {
+  top: 10%;
+  left: 54%;
+}
+
+/* Косая чёрная линия */
+.black-diagonal {
+  position: absolute;
+  width: 300px;
+  height: 8px;
+  background: black;
+  top: 65%;
+  left: 30%;
+  transform: rotate(-15deg);
+  z-index: 4;
+}
+
+/* Синие линии */
+.blue-line {
+  position: absolute;
+  width: 60px;
+  height: 6px;
+  background: #1a237e;
+  z-index: 5;
+}
+
+.line1 {
+  top: 70%;
+  left: 28%;
+  transform: rotate(-10deg);
+}
+
+.line2 {
+  top: 73%;
+  left: 31%;
+  transform: rotate(-5deg);
+}
+
+.line3 {
+  top: 76%;
+  left: 34%;
+}
+
+.moveable {
+  transition: top 1s ease, left 1s ease;
+}
